@@ -33,7 +33,10 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "execute": "webpack && node build/app.bundle.js"
+    "docker-run": "docker-compose up",
+    "build": "webpack && node build/app.bundle.js",
+    "test": "SET NODE_ENV=test&& mocha --timeout 10000 --require @babel/register --require babel-polyfill",
+    "start": "SET NODE_ENV=dev&& nodemon --exec babel-node ./index.js"
   },
   "repository": {
     "type": "git",

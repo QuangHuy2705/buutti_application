@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  buutti-application:
+    image: buutti-application-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8081
