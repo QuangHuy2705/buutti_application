@@ -27,14 +27,10 @@
     "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
-    "nodemon": "^1.19.1",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "nodemon": "^1.19.1"
   },
   "scripts": {
     "docker-run": "docker-compose up",
-    "build": "webpack && node build/app.bundle.js",
     "test": "SET NODE_ENV=test&& mocha --timeout 10000 --require @babel/register --require babel-polyfill",
     "start": "SET NODE_ENV=dev&& nodemon --exec babel-node ./index.js"
   },
