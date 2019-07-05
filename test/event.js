@@ -80,6 +80,24 @@ describe('EVENTS', () => {
         })
     })
 
+    describe('invalid /POST event', () => {
+        it('it should NOT CREATE a new event with missing inputs', (done) => {
+            const event = {
+                name: 'test1',
+                length: 4
+            }
+
+            chai.request(app)
+                .post('/api/events/')
+                .send({ ...event })
+                .end((err, res) => {
+                    res.should.have.status(400)
+
+                    done()
+                })
+        })
+    })
+
     //test invalid /GET route
     describe('invalid /GET events', () => {
         it('it should NOT GET events without query input(s)', (done) => {
