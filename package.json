@@ -32,7 +32,7 @@
   "scripts": {
     "docker-run": "docker-compose up",
     "test": "SET NODE_ENV=test&& mocha --timeout 10000 --require @babel/register --require babel-polyfill",
-    "start": "SET NODE_ENV=dev&& nodemon --exec babel-node ./index.js"
+    "start": "nodemon --exec babel-node ./index.js"
   },
   "repository": {
     "type": "git",
