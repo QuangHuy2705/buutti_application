@@ -33,10 +33,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s"
+    "execute": "webpack && node build/app.bundle.js"
   },
   "repository": {
     "type": "git",
